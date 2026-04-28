@@ -357,27 +357,61 @@ body {
 .process-section .section-title { color: var(--white); }
 .process-section .section-desc { color: rgba(255,255,255,0.6); }
 .process-section .container { text-align: center; }
+
 .process-grid {
-  display: flex; align-items: flex-start; justify-content: center;
-  gap: 0; flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 40px;
 }
-.process-step {
-  flex: 1; min-width: 180px; max-width: 220px;
-  padding: 24px 20px; text-align: center;
-  display: flex; flex-direction: column; align-items: center;
-}
-.process-img {
-  width: 90px; height: 90px; border-radius: 50%;
-  object-fit: cover; margin-bottom: 16px;
-  border: 3px solid rgba(255,255,255,0.1);
+.process-card {
   background: var(--navy-2);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: left;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
 }
-.process-num {
-  font-family: var(--font-display); font-size: 3rem;
-  font-weight: 800; color: var(--gold); line-height: 1; margin-bottom: 16px; opacity: 0.6;
+.process-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
-.process-step h4 { font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 10px; }
-.process-step p { color: rgba(255,255,255,0.55); font-size: 0.88rem; line-height: 1.6; }
+.pc-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: 24px;
+}
+.pc-top {
+  margin-bottom: 16px;
+}
+.pc-num {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1;
+  opacity: 0.3;
+  transition: var(--transition);
+}
+.process-card:hover .pc-num {
+  opacity: 1;
+}
+.process-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+.process-card p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
 .process-arrow {
   font-size: 1.8rem; color: var(--gold); opacity: 0.4;
   align-self: center; padding: 0 8px; margin-top: 40px;
@@ -596,6 +630,10 @@ body {
   .sb-gallery.grid-rehab img { height: 220px; }
   
   .marquee .testimonio-card { width: 300px; }
+  
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 600px) {
   .hero-title { font-size: 2.8rem; }
@@ -603,6 +641,9 @@ body {
   .sb-title { font-size: 1.8rem; }
   .sb-content { padding: 30px 20px; }
   .section-title { font-size: 2.2rem; }
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @keyframes pulse-wa {
