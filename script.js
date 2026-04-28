@@ -1,3 +1,98 @@
+// ══ CARRUSEL TÁCTIL ══
+(function() {
+  const track   = document.getElementById('carousel-track');
+  const dotsWrap = document.getElementById('carousel-dots');
+  if (!track) return;
+
+  const slides  = track.querySelectorAll('.carousel-slide');
+  const total   = slides.length;
+  let current   = 0;
+  let startX    = 0, isDragging = false, dragDelta = 0;
+
+  // Crear dots
+  slides.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', `Slide ${i + 1}`);
+    d.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(d);
+  });
+
+  function slideWidth() {
+    return slides[0].offsetWidth + 24; // ancho + margin*2
+  }
+
+  function goTo(index) {
+    current = (index + total) % total;
+    const offset = -current * slideWidth();
+    track.style.transform = `translateX(${offset}px)`;
+    dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  // Botones
+  document.getElementById('carousel-prev').addEventListener('click', () => goTo(current - 1));
+  document.getElementById('carousel-next').addEventListener('click', () => goTo(current + 1));
+
+  // Touch swipe
+  track.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+    isDragging = false;
+  }, { passive: true });
+
+  track.addEventListener('touchmove', e => {
+    dragDelta = e.touches[0].clientX - startX;
+    isDragging = true;
+    const offset = -current * slideWidth() + dragDelta;
+    track.style.transition = 'none';
+    track.style.transform = `translateX(${offset}px)`;
+  }, { passive: true });
+
+  track.addEventListener('touchend', () => {
+    track.style.transition = '';
+    if (isDragging) {
+      if (dragDelta < -60)      goTo(current + 1);
+      else if (dragDelta > 60)  goTo(current - 1);
+      else                      goTo(current);
+    }
+    isDragging = false;
+    dragDelta = 0;
+  });
+
+  // Mouse drag (desktop)
+  track.addEventListener('mousedown', e => {
+    startX = e.clientX;
+    isDragging = true;
+    track.classList.add('dragging');
+  });
+  window.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    dragDelta = e.clientX - startX;
+    const offset = -current * slideWidth() + dragDelta;
+    track.style.transition = 'none';
+    track.style.transform = `translateX(${offset}px)`;
+  });
+  window.addEventListener('mouseup', () => {
+    if (!isDragging) return;
+    track.classList.remove('dragging');
+    track.style.transition = '';
+    if (dragDelta < -60)     goTo(current + 1);
+    else if (dragDelta > 60) goTo(current - 1);
+    else                     goTo(current);
+    isDragging = false;
+    dragDelta = 0;
+  });
+
+  // Auto-play suave cada 5s
+  let autoplay = setInterval(() => goTo(current + 1), 5000);
+  track.addEventListener('touchstart', () => clearInterval(autoplay), { passive: true });
+  track.addEventListener('mousedown', () => clearInterval(autoplay));
+
+  // Init
+  goTo(0);
+})();
+
 // ══ NAV SCROLL ══
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
