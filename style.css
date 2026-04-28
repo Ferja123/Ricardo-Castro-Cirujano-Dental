@@ -228,9 +228,14 @@ body {
 .services-section { background: var(--off-white); }
 .services-section .container { text-align: center; }
 .services-grid {
-  display: grid; grid-template-columns: repeat(3,1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px; text-align: left;
 }
+/* Últimas 2 cards centradas cuando son 5 */
+.services-grid .service-card:nth-child(4) { grid-column: 1; }
+.services-grid .service-card:nth-child(5) { grid-column: 2; }
+.services-grid .service-card:nth-child(6) { grid-column: 3; }
 .service-card {
   background: var(--white); border-radius: var(--radius-lg);
   overflow: hidden; box-shadow: var(--shadow);
