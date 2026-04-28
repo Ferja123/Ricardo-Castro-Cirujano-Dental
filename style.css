@@ -470,7 +470,141 @@ body {
   box-shadow: 0 8px 28px rgba(37,211,102,0.5);
   transition: var(--transition); animation: pulse-wa 2.5s infinite;
 }
-.floating-wa:hover { transform: scale(1.1); box-shadow: 0 12px 36px rgba(37,211,102,0.6); }
+.floating-wa:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 12px 24px rgba(37,211,102,0.5);
+}
+
+/* ══════════════════════════════
+   GALERÍAS DE SERVICIOS
+   ══════════════════════════════ */
+.sb-gallery {
+  flex: 1;
+  min-width: 45%;
+  display: grid;
+  gap: 12px;
+}
+.sb-gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+/* Grid Diseño de Sonrisa */
+.sb-gallery.grid-ds {
+  grid-template-columns: repeat(2, 1fr);
+}
+.sb-gallery.grid-ds img:first-child,
+.sb-gallery.grid-ds img:nth-child(2) {
+  grid-column: span 1;
+  height: 220px;
+}
+.sb-gallery.grid-ds img:nth-child(3) {
+  grid-column: span 2;
+  height: 260px;
+}
+.sb-gallery.grid-ds img:nth-child(4),
+.sb-gallery.grid-ds img:nth-child(5),
+.sb-gallery.grid-ds img:nth-child(6),
+.sb-gallery.grid-ds img:nth-child(7),
+.sb-gallery.grid-ds img:nth-child(8) {
+  height: 180px;
+}
+
+/* Grid Implantología */
+.sb-gallery.grid-implantes {
+  grid-template-columns: repeat(2, 1fr);
+}
+.sb-gallery.grid-implantes img:first-child {
+  grid-column: span 2;
+  height: 320px;
+}
+
+/* Grid Rehab */
+.sb-gallery.grid-rehab {
+  grid-template-columns: 1fr;
+}
+.sb-gallery.grid-rehab img {
+  height: 280px;
+}
+
+/* ══════════════════════════════
+   MARQUEE INFINITO TESTIMONIOS
+   ══════════════════════════════ */
+.marquee-wrapper {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  overflow: hidden;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+.marquee {
+  display: flex;
+  gap: 24px;
+  animation: scrollLeft 60s linear infinite;
+  width: max-content;
+}
+.marquee-reverse {
+  animation: scrollRight 60s linear infinite;
+}
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes scrollRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+.marquee .testimonio-card {
+  width: 360px;
+  flex-shrink: 0;
+  white-space: normal;
+  background: var(--white);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  margin-bottom: 0;
+  transform: none;
+}
+.marquee:hover,
+.marquee-reverse:hover {
+  animation-play-state: paused;
+}
+/* Ocultar el grid anterior de testimonios si existía */
+.testimonios-grid { display: none; }
+
+/* ══════════════════════════════
+   OPTIMIZACIÓN MÓVIL (MOBILE)
+   ══════════════════════════════ */
+@media (max-width: 900px) {
+  .sb-gallery {
+    min-width: 100%;
+  }
+  .sb-gallery.grid-ds img:nth-child(3) { height: 200px; }
+  .sb-gallery.grid-ds img:first-child,
+  .sb-gallery.grid-ds img:nth-child(2) { height: 160px; }
+  .sb-gallery.grid-ds img:nth-child(4),
+  .sb-gallery.grid-ds img:nth-child(5),
+  .sb-gallery.grid-ds img:nth-child(6),
+  .sb-gallery.grid-ds img:nth-child(7),
+  .sb-gallery.grid-ds img:nth-child(8) { height: 140px; }
+  
+  .sb-gallery.grid-implantes img:first-child { height: 240px; }
+  .sb-gallery.grid-implantes img { height: 160px; }
+  
+  .sb-gallery.grid-rehab img { height: 220px; }
+  
+  .marquee .testimonio-card { width: 300px; }
+}
+@media (max-width: 600px) {
+  .hero-title { font-size: 2.8rem; }
+  .hero-subtitle { font-size: 1.1rem; }
+  .sb-title { font-size: 1.8rem; }
+  .sb-content { padding: 30px 20px; }
+  .section-title { font-size: 2.2rem; }
+}
+
 @keyframes pulse-wa {
   0%,100% { box-shadow: 0 8px 28px rgba(37,211,102,0.5); }
   50% { box-shadow: 0 8px 40px rgba(37,211,102,0.8), 0 0 0 12px rgba(37,211,102,0.1); }

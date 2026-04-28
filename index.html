@@ -103,8 +103,15 @@
         
         <!-- Bloque 1: Diseño de Sonrisa -->
         <div class="service-block">
-          <div class="sb-image">
+          <div class="sb-gallery grid-ds">
             <img src="images/real_uploads/img5.png" alt="Diseño de Sonrisa" loading="lazy">
+            <img src="images/real_uploads/sd_1.png" alt="Caso de Éxito 1" loading="lazy">
+            <img src="images/real_uploads/sd_2.png" alt="Caso de Éxito 2" loading="lazy">
+            <img src="images/real_uploads/sd_3.png" alt="Caso de Éxito 3" loading="lazy">
+            <img src="images/real_uploads/sd_4.png" alt="Caso de Éxito 4" loading="lazy">
+            <img src="images/real_uploads/sd_5.png" alt="Caso de Éxito 5" loading="lazy">
+            <img src="images/real_uploads/sd_6.png" alt="Caso de Éxito 6" loading="lazy">
+            <img src="images/real_uploads/sd_7.png" alt="Caso de Éxito 7" loading="lazy">
           </div>
           <div class="sb-content">
             <div class="sb-tag">⭐ Especialidad</div>
@@ -155,8 +162,10 @@
 
         <!-- Bloque 4: Implantología -->
         <div class="service-block reverse">
-          <div class="sb-image">
+          <div class="sb-gallery grid-implantes">
             <img src="images/real_uploads/img8.png" alt="Implantología" loading="lazy">
+            <img src="images/real_uploads/impl_1.png" alt="Caso de Implantes 1" loading="lazy">
+            <img src="images/real_uploads/impl_2.png" alt="Caso de Implantes 2" loading="lazy">
           </div>
           <div class="sb-content">
             <h3 class="sb-title">Implantología</h3>
@@ -172,8 +181,9 @@
 
         <!-- Bloque 5: Rehabilitación Oral -->
         <div class="service-block">
-          <div class="sb-image">
+          <div class="sb-gallery grid-rehab">
             <img src="images/real_uploads/img7.png" alt="Rehabilitación Oral" loading="lazy">
+            <img src="images/real_uploads/rehab_1.png" alt="Caso de Rehabilitación" loading="lazy">
           </div>
           <div class="sb-content">
             <h3 class="sb-title">Rehabilitación Oral</h3>
@@ -266,45 +276,63 @@
     </div>
   </section>
 
-  <!-- TESTIMONIOS -->
-  <section class="section testimonios-section" id="testimonios">
+  <!-- TESTIMONIOS (MARQUEE INFINITO) -->
+  <section class="section testimonios-section" id="testimonios" style="overflow:hidden;">
     <div class="container">
       <div class="section-label">TESTIMONIOS</div>
       <h2 class="section-title">Lo que dicen<br><em>nuestros pacientes</em></h2>
-      <div class="testimonios-grid">
-        <div class="testimonio-card">
-          <div class="testimonio-stars">★★★★★</div>
-          <p>"El Dr. Castro cambió completamente mi vida. Tenía vergüenza de sonreír y ahora no puedo parar. Las carillas quedaron increíblemente naturales."</p>
-          <div class="testimonio-author">
-            <div class="testimonio-avatar"><img src="images/real_uploads/img1.png" alt="Paciente" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div>
-            <div>
-              <strong>María Elena R.</strong>
-              <span>Carillas de Cerámica</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonio-card featured">
-          <div class="testimonio-stars">★★★★★</div>
-          <p>"Perdí dos dientes y vivía con esa pena. Los implantes del Dr. Castro son perfectos, no se notan para nada. El proceso fue más fácil de lo que imaginaba."</p>
-          <div class="testimonio-author">
-            <div class="testimonio-avatar">C</div>
-            <div>
-              <strong>Carlos M.</strong>
-              <span>Implantes Dentales</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonio-card">
-          <div class="testimonio-stars">★★★★★</div>
-          <p>"El diseño de sonrisa fue una experiencia increíble. Ver cómo iba a quedar antes de hacer nada me dio total confianza. 100% recomendado."</p>
-          <div class="testimonio-author">
-            <div class="testimonio-avatar"><img src="images/real_uploads/img11.png" alt="Paciente Diseño de Sonrisa" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div>
-            <div>
-              <strong>Luciana P.</strong>
-              <span>Diseño de Sonrisa</span>
-            </div>
-          </div>
-        </div>
+    </div>
+    <div class="marquee-wrapper">
+      <div class="marquee">
+        <!-- 10 TESTIMONIOS MARQUEE 1 -->
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"El Dr. Castro cambió completamente mi vida. Tenía vergüenza de sonreír y ahora no puedo parar."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="images/real_uploads/img1.png" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>María Elena R.</strong><span>Carillas de Cerámica</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Perdí dos dientes y vivía con esa pena. Los implantes del Dr. Castro son perfectos, no se notan para nada."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/men/32.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Carlos M.</strong><span>Implantes Dentales</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"El diseño de sonrisa fue una experiencia increíble. Ver cómo iba a quedar antes de hacer nada me dio total confianza."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="images/real_uploads/img11.png" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Luciana P.</strong><span>Diseño de Sonrisa</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Atención de primera. Pensé que el blanqueamiento me daría sensibilidad, pero nada. ¡Quedó súper natural!"</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/women/44.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Fiorella M.</strong><span>Blanqueamiento Dental</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"La ortodoncia fue un éxito. En año y medio tenía la sonrisa que siempre soñé. Lo recomiendo al 100%."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/women/68.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Camila S.</strong><span>Ortodoncia Invisible</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Un equipo de profesionales excepcionales. Me hice rehabilitación oral completa y el resultado superó todo."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/men/46.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Luis A.</strong><span>Rehabilitación Oral</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Mis nuevas coronas se ven idénticas a mis dientes naturales. Estoy fascinada con el nivel de detalle."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/women/24.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Valeria G.</strong><span>Coronas de Porcelana</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"La cirugía de implantes no dolió en absoluto. Me sentí súper seguro en sus manos durante todo el proceso."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/men/22.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Jorge R.</strong><span>Implantología</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Increíble el cambio. El diseño de sonrisa me rejuveneció 10 años, la mejor inversión que he hecho."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/women/12.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Andrea C.</strong><span>Diseño de Sonrisa</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Nunca había tenido una limpieza y diagnóstico tan profundos. Muy profesionales en cada explicación."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/women/33.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Gabriela T.</strong><span>Evaluación Integral</span></div></div></div>
+        
+        <!-- Duplicado para efecto infinito -->
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"El Dr. Castro cambió completamente mi vida. Tenía vergüenza de sonreír y ahora no puedo parar."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="images/real_uploads/img1.png" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>María Elena R.</strong><span>Carillas de Cerámica</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Perdí dos dientes y vivía con esa pena. Los implantes del Dr. Castro son perfectos, no se notan para nada."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/men/32.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Carlos M.</strong><span>Implantes Dentales</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"El diseño de sonrisa fue una experiencia increíble. Ver cómo iba a quedar antes de hacer nada me dio total confianza."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="images/real_uploads/img11.png" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Luciana P.</strong><span>Diseño de Sonrisa</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Atención de primera. Pensé que el blanqueamiento me daría sensibilidad, pero nada. ¡Quedó súper natural!"</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/women/44.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Fiorella M.</strong><span>Blanqueamiento Dental</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"La ortodoncia fue un éxito. En año y medio tenía la sonrisa que siempre soñé. Lo recomiendo al 100%."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/women/68.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Camila S.</strong><span>Ortodoncia Invisible</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Un equipo de profesionales excepcionales. Me hice rehabilitación oral completa y el resultado superó todo."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/men/46.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Luis A.</strong><span>Rehabilitación Oral</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Mis nuevas coronas se ven idénticas a mis dientes naturales. Estoy fascinada con el nivel de detalle."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/women/24.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Valeria G.</strong><span>Coronas de Porcelana</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"La cirugía de implantes no dolió en absoluto. Me sentí súper seguro en sus manos durante todo el proceso."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/men/22.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Jorge R.</strong><span>Implantología</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Increíble el cambio. El diseño de sonrisa me rejuveneció 10 años, la mejor inversión que he hecho."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/women/12.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Andrea C.</strong><span>Diseño de Sonrisa</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Nunca había tenido una limpieza y diagnóstico tan profundos. Muy profesionales en cada explicación."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/women/33.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Gabriela T.</strong><span>Evaluación Integral</span></div></div></div>
+      </div>
+      
+      <!-- MARQUEE 2 (Reversa) -->
+      <div class="marquee marquee-reverse" style="margin-top:24px;">
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"El trato del Dr. Castro y su equipo es súper cálido. Te hacen perder el miedo al dentista desde la primera cita."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/women/16.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Daniela V.</strong><span>Diseño de Sonrisa</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Mis carillas de porcelana están impecables desde hace 3 años. Fue la mejor decisión que tomé en la vida."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/men/54.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Diego F.</strong><span>Carillas Cerámicas</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Tecnología de punta. Me hicieron un escáner 3D y en pocas sesiones ya tenía el puente fijo instalado."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/men/33.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Renzo C.</strong><span>Rehabilitación Oral</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Súper recomendados, mi mamá se puso implantes completos y ahora come de todo con una felicidad increíble."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/women/55.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Sofía B.</strong><span>Implantología Completa</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Impresionante nivel de detalle. El doctor es sumamente minucioso y eso se nota en los resultados finales."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/women/62.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Rosa L.</strong><span>Diseño de Sonrisa</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Acudí por una emergencia estética y resolvieron mi problema rápidamente y con resultados súper naturales."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/men/15.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Sebastian P.</strong><span>Emergencia Estética</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"La atención post-operatoria es A1. Siempre están pendientes de tu evolución. Muy buen servicio al paciente."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/women/71.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Carmen D.</strong><span>Cirugía Dental</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"El diseño de sonrisa en resina que me hicieron quedó súper brillante. Estoy muy satisfecha con mi nueva imagen."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/women/28.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Patricia F.</strong><span>Estética Dental</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Mi blanqueamiento LED funcionó de maravilla para mi boda. Mis dientes resaltaron en todas las fotos."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/men/66.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Rodrigo V.</strong><span>Blanqueamiento LED</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Calidad que se nota a kilómetros. La clínica es moderna, segura y todos te tratan con mucho respeto y amabilidad."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/women/19.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Milagros H.</strong><span>Ortodoncia</span></div></div></div>
+        
+        <!-- Duplicado para efecto infinito -->
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"El trato del Dr. Castro y su equipo es súper cálido. Te hacen perder el miedo al dentista desde la primera cita."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/women/16.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Daniela V.</strong><span>Diseño de Sonrisa</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Mis carillas de porcelana están impecables desde hace 3 años. Fue la mejor decisión que tomé en la vida."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/men/54.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Diego F.</strong><span>Carillas Cerámicas</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Tecnología de punta. Me hicieron un escáner 3D y en pocas sesiones ya tenía el puente fijo instalado."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/men/33.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Renzo C.</strong><span>Rehabilitación Oral</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Súper recomendados, mi mamá se puso implantes completos y ahora come de todo con una felicidad increíble."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/women/55.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Sofía B.</strong><span>Implantología Completa</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Impresionante nivel de detalle. El doctor es sumamente minucioso y eso se nota en los resultados finales."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/women/62.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Rosa L.</strong><span>Diseño de Sonrisa</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Acudí por una emergencia estética y resolvieron mi problema rápidamente y con resultados súper naturales."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/men/15.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Sebastian P.</strong><span>Emergencia Estética</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"La atención post-operatoria es A1. Siempre están pendientes de tu evolución. Muy buen servicio al paciente."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/women/71.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Carmen D.</strong><span>Cirugía Dental</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"El diseño de sonrisa en resina que me hicieron quedó súper brillante. Estoy muy satisfecha con mi nueva imagen."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/women/28.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Patricia F.</strong><span>Estética Dental</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Mi blanqueamiento LED funcionó de maravilla para mi boda. Mis dientes resaltaron en todas las fotos."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/men/66.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Rodrigo V.</strong><span>Blanqueamiento LED</span></div></div></div>
+        <div class="testimonio-card"><div class="testimonio-stars">★★★★★</div><p>"Calidad que se nota a kilómetros. La clínica es moderna, segura y todos te tratan con mucho respeto y amabilidad."</p><div class="testimonio-author"><div class="testimonio-avatar"><img src="https://randomuser.me/api/portraits/women/19.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div><div><strong>Milagros H.</strong><span>Ortodoncia</span></div></div></div>
       </div>
     </div>
   </section>
